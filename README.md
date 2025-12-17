@@ -62,12 +62,28 @@ Evaluated model performance using:
 - Classification report  
 
 ---
+## 📊 Model Performance Summary
+
+| Model               | Accuracy | Class 1 Recall | Class 1 F1 | Weighted F1 |
+|--------------------|----------|----------------|------------|-------------|
+| Logistic Regression | 78%      | 15%            | 0.27       | 0.71        |
+| SVM                | 76%      | 8%             | 0.14       | 0.67        |
+| KNN                | 86%      | 46%            | 0.63       | 0.84        |
+| Random Forest      | 92%      | 69%            | 0.82       | 0.91        |
+
+--- 
 
 ## 📊 Results
 
-The trained model achieved **strong classification performance**, demonstrating that effective preprocessing and feature extraction significantly improve EEG signal classification accuracy.
+The evaluated machine learning models showed varying performance in EEG signal classification, highlighting the importance of model selection for imbalanced biomedical datasets.
 
-This project validates the application of classical machine learning techniques in biomedical data analysis.
+Among all models, **Random Forest achieved the best performance**, with an **accuracy of 92%** and a **weighted F1-score of 0.91**, demonstrating strong overall classification capability. It also showed improved detection of the minority class with a **recall of 69%** for Class 1.
+
+The **K-Nearest Neighbors (KNN)** model achieved an **accuracy of 86%**, providing moderate performance but lower minority-class recall compared to Random Forest.
+
+In contrast, **Logistic Regression (78% accuracy)** and **Support Vector Machine (76% accuracy)** struggled with minority-class identification, exhibiting recall values below **15%**, despite reasonable overall accuracy.
+
+These results indicate that **ensemble-based approaches such as Random Forest are more effective for EEG signal classification**, particularly in class-imbalanced scenarios.
 
 ---
 
